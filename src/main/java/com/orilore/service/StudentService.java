@@ -23,7 +23,7 @@ public class StudentService implements IStudentService {
 
 	@Override
 	@Transactional(propagation=Propagation.REQUIRED)
-	public void saves(List<Student> students) {
+	public void save(Student... students) {
 		for (Student bean : students) {
 			this.mapper.insert(bean);
 		}
